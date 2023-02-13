@@ -1,0 +1,18 @@
+<%- include('partials/header') -%>
+
+    <nav class="navbar">
+        <h2 class="navbar__head">
+            PDF Merger
+        </h2>
+    </nav>
+    <section class="main">
+        <div class="mb-3">
+            <form action="/submit" method="POST" enctype="multipart/form-data">
+                <label for="formFile" class="form-label putMargin">Note: You can only merge two files at a time</label>
+                <input class="form-control" name="pdfs" type="file" id="formFile" multiple accept="application/pdf">
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <%- include('partials/footer') -%>
